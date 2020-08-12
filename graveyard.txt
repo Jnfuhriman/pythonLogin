@@ -1,0 +1,18 @@
+#Elephantay graveyard
+
+print("\nWelcome ", user)
+choice = input("Would you like to create a new user?\n")
+if choice == 'yes':
+    while True:
+        newUser = input("Enter a unique username: ")
+        if newUser in cred:
+            print('That username already exists\n')
+        else:
+            break
+    while True:
+        newPass = input("Enter a password: ")
+        verifyPass = input("Re-enter password to verify: ")
+        if newPass == verifyPass:
+            break
+        else: print('Passwords must match')
+    createUser(newUser, newPass)
